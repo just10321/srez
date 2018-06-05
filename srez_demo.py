@@ -13,7 +13,7 @@ def demo1(sess):
     # Get images that were dumped during training
     filenames = tf.gfile.ListDirectory(FLAGS.train_dir)
     filenames = sorted(filenames)
-    filenames = [os.path.join(FLAGS.train_dir, f) for f in filenames if f[-4:]=='.png']
+    filenames = [os.path.join(FLAGS.train_dir, f) for f in filenames if f[-4:]=='.jpg']
 
     assert len(filenames) >= 1
 

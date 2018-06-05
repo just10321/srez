@@ -126,9 +126,9 @@ def _demo():
 
     # Restore variables from checkpoint
     saver = tf.train.Saver()
-    filename = 'checkpoint_new.txt'
-    filename = os.path.join(FLAGS.checkpoint_dir, filename)
-    saver.restore(sess, filename)
+    # filename = 'checkpoint_new.txt'
+    # filename = os.path.join(FLAGS.checkpoint_dir, filename)
+    # saver.restore(sess, filename)
 
     # Execute demo
     srez_demo.demo1(sess)
