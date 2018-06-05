@@ -100,7 +100,7 @@ def setup_tensorflow():
     random.seed(FLAGS.random_seed)
     np.random.seed(FLAGS.random_seed)
 
-    summary_writer = tf.train.SummaryWriter(FLAGS.train_dir, sess.graph)
+    summary_writer = tf.train.FileWriter(FLAGS.train_dir, sess.graph)
 
     return sess, summary_writer
 
@@ -139,7 +139,7 @@ class TrainData(object):
 
 def _train():
     # Setup global tensorflow state
-    sess, summary_writer = setup_tensorflow()
+    sess, summary_terter = setup_tensorflow()
 
     # Prepare directories
     all_filenames = prepare_dirs(delete_train_dir=True)
